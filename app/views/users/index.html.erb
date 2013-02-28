@@ -1,0 +1,12 @@
+<h1>All users</h1>
+
+
+  <% @users.each do |user| %>
+
+        <%= link_to user.name, user %>
+
+        | <%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
+                      :title => "Delete #{user.name}" %>   <br/>
+
+  <% end %>
+<%= will_paginate %>
